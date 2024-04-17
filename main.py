@@ -98,7 +98,7 @@ for ran_counter in range(2):
 #                         A_e[2 * point_counter + 1, j:j+4] = [0, 0, 0, 0]
 #                         print("Set to zeros.")
 
-# print("Coefficient matrix A_e:")
+print("Coefficient matrix A_e:")
 print(A_e)
 
 

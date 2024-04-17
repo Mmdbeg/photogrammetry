@@ -59,12 +59,19 @@ for ran_counter in range(2):
         for point_counter in range(len(data)):
 
             for j in range(0,56,4):
+
                 if data.loc[point_counter,'ran'] == ran_counter and data.loc[point_counter,'photo'] == pic_counter :
+
                     if data.loc[point_counter,"POINT.TYPE"]== 1 :
+
                         A_e[2*point_counter-1,j:j+4] = [data.loc[point_counter,'x'] , -data.loc[point_counter,'y']  , 1 , 0]
+
                         A_e[2*point_counter,j:j+4] = [data.loc[point_counter,'y'] , data.loc[point_counter,'x']  , 0 , 1]
+
                     elif data.loc[point_counter,"POINT.TYPE"]==0 :  
+
                         A_e[2*point_counter-1,j:j+4] = [5,0,0,0]
+                        
                         A_e[2*point_counter,j:j+4] = [5,0,0,5] 
 
 
